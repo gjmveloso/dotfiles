@@ -13,6 +13,7 @@ bat
 colima
 difftastic
 docker
+docker-buildx
 docker-credential-helper
 dotnet
 flux

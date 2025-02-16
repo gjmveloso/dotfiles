@@ -11,6 +11,8 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export DOTNET_ROOT="$HOMEBREW_PREFIX/opt/dotnet/libexec"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
+export DOCKER_BUILDKIT=1
+
 export OLLAMA_KEEP_ALIVE=10m
 
 export PATH="$HOMEBREW_PREFIX/opt/node@22/bin:$PATH"

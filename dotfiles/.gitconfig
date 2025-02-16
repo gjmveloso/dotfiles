@@ -5,3 +5,5 @@
 	editor = zed --wait
 [init]
 	defaultBranch = main
+[includeif "gitdir:~/Code/Internal/**"]
+    path = ~/Code/Internal/.gitconfig

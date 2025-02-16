@@ -8,6 +8,8 @@ brew leaves >> packages/brew.txt
 brew list --cask >> packages/brew.txt
 echo "npm"
 npm list -g --depth=0 > packages/npm.txt
+echo "uv tools (Python)"
+uv tool list > packages/uv_tools.txt
 echo "
 
 Copying global .gitignore ..."
@@ -22,6 +24,8 @@ echo "Copying global .zshrc ..."
 cp ~/.zshrc dotfiles/.zshrc
 echo "Copying global .zprofile ..."
 cp ~/.zprofile dotfiles/.zprofile
+echo "Copying docker config.json ..."
+cp ~/.docker/config.json dotfiles/docker.config.json
 echo "Copying vale styles ..."
 cp -R ~/styles packages/styles
 echo "Copying vale global config ..."
