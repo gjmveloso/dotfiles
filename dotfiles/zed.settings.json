@@ -7,15 +7,16 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "assistant": {
+  "agent": {
+    "default_profile": "ask",
     "default_model": {
-      "provider": "ollama",
-      "model": "qwen2.5-coder:7b-instruct"
+      "provider": "google",
+      "model": "gemini-2.5-pro-preview-03-25"
     },
     "version": "2"
   },
   "features": {
-    "inline_completion_provider": "none"
+    "edit_prediction_provider": "none"
   },
   "ui_font_size": 14,
   "buffer_font_size": 14,
@@ -41,6 +42,28 @@
           ]
         }
       }
+    },
+    "Python": {
+      "language_servers": [
+        "pyright",
+        "ruff"
+      ],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    },
+    "YAML": {
+      "formatter": "language_server"
     }
   }
 }

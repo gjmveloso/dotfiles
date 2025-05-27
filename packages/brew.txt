@@ -1,5 +1,4 @@
 fluxcd/tap
-homebrew/services
 age
 bash-completion
 bat
@@ -18,10 +17,12 @@ go
 grep
 grype
 hadolint
+helm
 hugo
 jq
 k9s
 ko
+kompose
 kubernetes-cli
 kubie
 mise
@@ -50,6 +51,7 @@ zsh-syntax-highlighting
 android-studio
 appcleaner
 bruno
+dbeaver-community
 displaylink
 drawio
 flux

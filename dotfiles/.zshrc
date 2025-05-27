@@ -42,8 +42,6 @@ export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/node@22/include:$CPPFLAGS"
 if type brew &>/dev/null; then
   FPATH=$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH
   FPATH=$HOMEBREW_PREFIX/share/zsh-completions:$FPATH
-  FPATH=$HOMEBREW_PREFIX/etc/bash_completion.d:$FPATH
-  FPATH=$HOMEBREW_PREFIX/share/bash-completion/completions:$FPATH
   autoload -Uz compinit && compinit -i
 fi
 
@@ -109,9 +107,11 @@ alias zst="gtar --zstd -cvf"
 alias refresh-launchpad="defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock"
 alias flush-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 
-eval "$(mise activate zsh)"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+eval "$(kompose completion zsh)"
+
+eval "$(mise activate zsh)"
 
 eval "$(starship init zsh)"
 

@@ -3,6 +3,9 @@ command_timeout = 2500
 [aws]
 symbol = "  "
 
+[gcloud]
+format = 'on [$symbol$account(@$domain) (\($project\)) in (\($region\))]($style) '
+
 [buf]
 symbol = " "
 format = '(with [$symbol($version )]($style))'
