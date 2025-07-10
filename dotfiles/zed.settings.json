@@ -8,10 +8,10 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "agent": {
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "google",
-      "model": "gemini-2.5-pro-preview-03-25"
+      "model": "gemini-2.5-pro"
     },
     "version": "2"
   },
@@ -45,10 +45,10 @@
     },
     "Python": {
       "language_servers": [
-        "pyright",
+        "pyrefly",
         "ruff"
       ],
-      "format_on_save": "on",
+      "format_on_save": "off",
       "formatter": [
         {
           "code_actions": {
@@ -61,9 +61,6 @@
           }
         }
       ]
-    },
-    "YAML": {
-      "formatter": "language_server"
     }
   }
 }

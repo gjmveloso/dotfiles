@@ -1,4 +1,5 @@
-/Users/gus/.local/share/mise/installs/node/22.14.0/lib
-├── corepack@0.31.0
+/Users/gus/.local/share/mise/installs/node/22.16.0/lib
+├── @nestjs/cli@11.0.7
+├── corepack@0.32.0
 └── npm@10.9.2
 

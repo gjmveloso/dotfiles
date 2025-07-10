@@ -8,6 +8,8 @@ export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+export DO_NOT_TRACK=1
+
 export DOTNET_ROOT="$HOMEBREW_PREFIX/opt/dotnet/libexec"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
@@ -16,6 +18,8 @@ export DOCKER_BUILDKIT=1
 export OLLAMA_KEEP_ALIVE=10m
 
 export PATH="$HOMEBREW_PREFIX/opt/node@22/bin:$PATH"
+
+export PATH="$HOMEBREW_PREFIX/opt/python@3.12/libexec/bin:$PATH"
 
 export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
 
@@ -110,6 +114,7 @@ alias flush-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 eval "$(kompose completion zsh)"
+eval "$(dagger completion zsh)"
 
 eval "$(mise activate zsh)"
 

@@ -1,13 +1,17 @@
+dagger/tap
 fluxcd/tap
+utkuozdemir/pv-migrate
 age
 bash-completion
 bat
 colima
+dagger/tap/dagger
 difftastic
 docker
 docker-buildx
 docker-credential-helper
 dotnet
+feluda
 fluxcd/tap/flux
 fzf
 git
@@ -41,6 +45,7 @@ tokei
 trippy
 trivy
 trufflehog
+utkuozdemir/pv-migrate/pv-migrate
 uv
 vale
 watchman
@@ -55,6 +60,7 @@ dbeaver-community
 displaylink
 drawio
 flux
+flux-app
 font-fira-code
 font-fira-code-nerd-font
 ghostty
