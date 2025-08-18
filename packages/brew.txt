@@ -48,6 +48,7 @@ trufflehog
 utkuozdemir/pv-migrate/pv-migrate
 uv
 vale
+watch
 watchman
 zsh
 zsh-completions
@@ -63,6 +64,7 @@ flux
 flux-app
 font-fira-code
 font-fira-code-nerd-font
+gcloud-cli
 ghostty
 google-cloud-sdk
 keepingyouawake

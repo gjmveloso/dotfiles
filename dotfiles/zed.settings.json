@@ -7,16 +7,27 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "context_servers": {
+    
+  },
   "agent": {
     "default_profile": "write",
     "default_model": {
       "provider": "google",
       "model": "gemini-2.5-pro"
     },
-    "version": "2"
-  },
-  "features": {
-    "edit_prediction_provider": "none"
+    "inline_assistant_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash"
+    },
+    "commit_message_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash"
+    },
+    "thread_summary_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash"
+    }
   },
   "ui_font_size": 14,
   "buffer_font_size": 14,
@@ -48,7 +59,7 @@
         "pyrefly",
         "ruff"
       ],
-      "format_on_save": "off",
+      "format_on_save": "on",
       "formatter": [
         {
           "code_actions": {
