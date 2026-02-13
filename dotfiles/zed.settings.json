@@ -8,26 +8,97 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "context_servers": {
-    
+    "chrome-devtools": {
+      "env": {},
+      "enabled": true,
+      "command": "npx",
+      "args": [
+        "chrome-devtools-mcp@latest"
+      ]
+    },
+    "aws-knowledge-mcp-server": {
+      "settings": {},
+      "enabled": true,
+      "url": "https://knowledge-mcp.global.api.aws"
+    }
+  },
+  "language_models": {
+    "bedrock": {
+      "authentication_method": "named_profile",
+      "profile": "bedrock-claude",
+      "region": "us-east-1"
+    }
   },
   "agent": {
-    "default_profile": "write",
     "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-pro"
-    },
-    "inline_assistant_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
-    },
-    "commit_message_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
+      "provider": "amazon-bedrock",
+      "model": "claude-sonnet-4-5"
     },
     "thread_summary_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash"
-    }
+      "provider": "amazon-bedrock",
+      "model": "claude-haiku-4-5"
+    },
+    "always_allow_tool_actions": true,
+    "profiles": {
+      "ask": {
+        "name": "Ask",
+        "tools": {
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": false,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "chrome-devtools": {
+            "tools": {
+              "handle_dialog": true,
+              "get_network_request": true,
+              "hover": true,
+              "list_network_requests": true,
+              "list_console_messages": true,
+              "list_pages": true,
+              "navigate_page": true,
+              "new_page": true,
+              "performance_analyze_insight": true,
+              "performance_start_trace": true,
+              "performance_stop_trace": true,
+              "press_key": true,
+              "resize_page": true,
+              "select_page": true,
+              "take_screenshot": true,
+              "take_snapshot": true,
+              "upload_file": true,
+              "wait_for": true
+            }
+          },
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": true,
+              "get-library-docs": true
+            }
+          },
+          "aws-knowledge-mcp-server": {
+            "tools": {
+              "aws___search_documentation": true,
+              "aws___recommend": true,
+              "aws___read_documentation": true,
+              "aws___list_regions": true,
+              "aws___get_regional_availability": true
+            }
+          }
+        }
+      }
+    },
+    "default_profile": "write",
+    "model_parameters": []
   },
   "ui_font_size": 14,
   "buffer_font_size": 14,
@@ -56,15 +127,13 @@
     },
     "Python": {
       "language_servers": [
-        "pyrefly",
+        "ty",
         "ruff"
       ],
       "format_on_save": "on",
       "formatter": [
         {
-          "code_actions": {
-            "source.fixAll.ruff": true
-          }
+          "code_action": "source.fixAll.ruff"
         },
         {
           "language_server": {

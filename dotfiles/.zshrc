@@ -1,3 +1,7 @@
+
+# Kiro CLI pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
+
 # If you come from bash you might have to change your $PATH.
 
 export HOMEBREW_PREFIX=$(brew --prefix)
@@ -5,6 +9,8 @@ export SHELL="$HOMEBREW_PREFIX/bin/zsh"
 export PATH="$HOMEBREW_PREFIX/opt/openssl@3/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:~/bin:$PATH"
 export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
+
+export PATH="$HOME/.local/bin:$PATH"
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
@@ -20,8 +26,6 @@ export OLLAMA_KEEP_ALIVE=10m
 export PATH="$HOMEBREW_PREFIX/opt/node@22/bin:$PATH"
 
 export PATH="$HOMEBREW_PREFIX/opt/python@3.12/libexec/bin:$PATH"
-
-export PATH="${HOME}/Library/Android/sdk/tools:${HOME}/Library/Android/sdk/platform-tools:${PATH}"
 
 export GOPROXY="direct"
 
@@ -55,7 +59,7 @@ source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
-plugins=(macos git gcloud docker kubectl)
+plugins=(macos git aws docker kubectl opentofu terraform)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -114,7 +118,9 @@ alias flush-dns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 eval "$(kompose completion zsh)"
-eval "$(dagger completion zsh)"
+eval "$(ast-grep completions zsh)"
+eval "$(op completion zsh)"
+
 
 eval "$(mise activate zsh)"
 

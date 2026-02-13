@@ -1,6 +1,4 @@
-aider-chat v0.85.2
-- aider
-pyrefly v0.25.0
+pyrefly v0.35.0
 - pyrefly
-ruff v0.12.8
+ruff v0.13.2
 - ruff

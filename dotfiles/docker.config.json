@@ -1,15 +1,9 @@
 {
-	"auths": {
-		"swr.ap-southeast-3.myhuaweicloud.com": {},
-		"swr.la-south-2.myhuaweicloud.com": {}
-	},
+	"auths": {},
 	"credsStore": "osxkeychain",
 	"credHelpers": {
-		"us-docker.pkg.dev": "gcloud",
-		"us-east1-docker.pkg.dev": "gcloud"
+		"064816466676.dkr.ecr.us-east-1.amazonaws.com": "ecr-login",
+		"public.ecr.aws": "ecr-login"
 	},
-	"currentContext": "colima",
-	"cliPluginsExtraDirs": [
-		"/opt/homebrew/lib/docker/cli-plugins"
-	]
+	"currentContext": "colima"
 }

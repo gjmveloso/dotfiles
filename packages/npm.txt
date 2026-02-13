@@ -1,5 +1,7 @@
-/Users/gus/.local/share/mise/installs/node/22.16.0/lib
-├── @nestjs/cli@11.0.7
-├── corepack@0.32.0
-└── npm@10.9.2
+/opt/homebrew/lib
+├── aws-cdk@2.1104.0
+├── eslint@9.39.2
+├── npm-check-updates@19.3.2
+├── prettier@3.8.1
+└── typescript@5.9.3
 
