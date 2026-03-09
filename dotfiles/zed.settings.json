@@ -8,13 +8,18 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "context_servers": {
-    "chrome-devtools": {
-      "env": {},
+    "awslabs.aws-pricing-mcp-server": {
       "enabled": true,
-      "command": "npx",
+      "remote": false,
+      "command": "uvx",
       "args": [
-        "chrome-devtools-mcp@latest"
-      ]
+        "awslabs.aws-pricing-mcp-server@latest"
+      ],
+      "env": {
+        "AWS_PROFILE": "frust_prod",
+        "AWS_REGION": "us-east-1",
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      }
     },
     "aws-knowledge-mcp-server": {
       "settings": {},
@@ -30,16 +35,88 @@
     }
   },
   "agent": {
+    "tool_permissions": {
+      "default": "allow"
+    },
     "default_model": {
       "provider": "amazon-bedrock",
-      "model": "claude-sonnet-4-5"
+      "model": "claude-sonnet-4-6"
     },
     "thread_summary_model": {
       "provider": "amazon-bedrock",
       "model": "claude-haiku-4-5"
     },
-    "always_allow_tool_actions": true,
     "profiles": {
+      "aws": {
+        "name": "AWS",
+        "tools": {
+          "diagnostics": true,
+          "fetch": true,
+          "list_directory": true,
+          "project_notifications": false,
+          "now": true,
+          "find_path": true,
+          "read_file": true,
+          "open": true,
+          "grep": true,
+          "subagent": true,
+          "thinking": true,
+          "web_search": true
+        },
+        "enable_all_context_servers": false,
+        "context_servers": {
+          "awslabs.aws-pricing-mcp-server": {
+            "tools": {
+              "get_pricing_service_codes": true,
+              "get_pricing_service_attributes": true,
+              "get_pricing_attribute_values": true,
+              "get_pricing": true,
+              "get_price_list_urls": true,
+              "get_bedrock_patterns": false,
+              "generate_cost_report": true,
+              "analyze_terraform_project": false,
+              "analyze_cdk_project": false
+            }
+          },
+          "chrome-devtools": {
+            "tools": {
+              "handle_dialog": true,
+              "get_network_request": true,
+              "hover": true,
+              "list_network_requests": true,
+              "list_console_messages": true,
+              "list_pages": true,
+              "navigate_page": true,
+              "new_page": true,
+              "performance_analyze_insight": true,
+              "performance_start_trace": true,
+              "performance_stop_trace": true,
+              "press_key": true,
+              "resize_page": true,
+              "select_page": true,
+              "take_screenshot": true,
+              "take_snapshot": true,
+              "upload_file": true,
+              "wait_for": true
+            }
+          },
+          "mcp-server-context7": {
+            "tools": {
+              "resolve-library-id": false,
+              "get-library-docs": true
+            }
+          },
+          "aws-knowledge-mcp-server": {
+            "tools": {
+              "aws___search_documentation": true,
+              "aws___recommend": true,
+              "aws___read_documentation": true,
+              "aws___list_regions": true,
+              "aws___get_regional_availability": true
+            }
+          }
+        }
+      },
       "ask": {
         "name": "Ask",
         "tools": {
@@ -97,7 +174,7 @@
         }
       }
     },
-    "default_profile": "write",
+    "default_profile": "aws",
     "model_parameters": []
   },
   "ui_font_size": 14,

@@ -1,3 +1,4 @@
+oven-sh/bun
 age
 ast-grep
 awscli
@@ -13,6 +14,7 @@ docker-credential-helper-ecr
 dotnet
 feluda
 fzf
+gh
 git
 git-filter-repo
 gitleaks
@@ -30,16 +32,17 @@ kompose
 kubernetes-cli
 kubie
 mise
-node@22
+node@24
 oha
 ollama
 opentofu
+oven-sh/bun/bun
 pipx
 pnpm
+poppler
 ruby
 rust
 semgrep
-specify
 starship
 syft
 tokei
@@ -62,6 +65,8 @@ dbeaver-community
 displaylink
 drawio
 flux-app
+font-chivo
+font-chivo-mono
 font-fira-code
 font-fira-code-nerd-font
 ghostty

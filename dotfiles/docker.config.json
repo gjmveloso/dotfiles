@@ -5,5 +5,11 @@
 		"064816466676.dkr.ecr.us-east-1.amazonaws.com": "ecr-login",
 		"public.ecr.aws": "ecr-login"
 	},
-	"currentContext": "colima"
+	"currentContext": "colima",
+	"cliPluginsExtraDirs": [
+		"/opt/homebrew/lib/docker/cli-plugins"
+	],
+	"aliases": {
+		"builder": "buildx"
+	}
 }

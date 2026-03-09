@@ -1,6 +1,10 @@
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+fpath=("/Users/gustavo/.oh-my-zsh/custom/completions" $fpath)
+autoload -Uz compinit
+compinit
+# OPENSPEC:END
 
-# Kiro CLI pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.pre.zsh"
 
 # If you come from bash you might have to change your $PATH.
 
@@ -23,9 +27,9 @@ export DOCKER_BUILDKIT=1
 
 export OLLAMA_KEEP_ALIVE=10m
 
-export PATH="$HOMEBREW_PREFIX/opt/node@22/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/node@24/bin:$PATH"
 
-export PATH="$HOMEBREW_PREFIX/opt/python@3.12/libexec/bin:$PATH"
+export PATH="$HOMEBREW_PREFIX/opt/python@3.14/libexec/bin:$PATH"
 
 export GOPROXY="direct"
 
@@ -44,8 +48,8 @@ export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/ruby/include:$CPPFLAGS"
 export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/opt/ruby/lib/pkgconfig:$PKG_CONFIG_PATH"
 export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/sqlite/include:$CPPFLAGS"
 export PKG_CONFIG_PATH="$HOMEBREW_PREFIX/opt/sqlite/lib/pkgconfig:$PKG_CONFIG_PATH"
-export LDFLAGS="-L$HOMEBREW_PREFIX/opt/node@22/lib:$LDFLAGS"
-export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/node@22/include:$CPPFLAGS"
+export LDFLAGS="-L$HOMEBREW_PREFIX/opt/node@24/lib:$LDFLAGS"
+export CPPFLAGS="-I$HOMEBREW_PREFIX/opt/node@24/include:$CPPFLAGS"
 
 if type brew &>/dev/null; then
   FPATH=$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH
