@@ -123,7 +123,6 @@ eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
 eval "$(kompose completion zsh)"
 eval "$(ast-grep completions zsh)"
-eval "$(op completion zsh)"
 
 
 eval "$(mise activate zsh)"

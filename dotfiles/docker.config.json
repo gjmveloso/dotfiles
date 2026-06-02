@@ -1,15 +1,5 @@
 {
 	"auths": {},
 	"credsStore": "osxkeychain",
-	"credHelpers": {
-		"064816466676.dkr.ecr.us-east-1.amazonaws.com": "ecr-login",
-		"public.ecr.aws": "ecr-login"
-	},
-	"currentContext": "colima",
-	"cliPluginsExtraDirs": [
-		"/opt/homebrew/lib/docker/cli-plugins"
-	],
-	"aliases": {
-		"builder": "buildx"
-	}
+	"currentContext": "colima"
 }

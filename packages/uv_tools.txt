@@ -1,6 +1,6 @@
-pyrefly v0.55.0
+pyrefly v1.0.0
 - pyrefly
-ruff v0.15.4
+ruff v0.15.15
 - ruff
-ty v0.0.20
+ty v0.0.42
 - ty
